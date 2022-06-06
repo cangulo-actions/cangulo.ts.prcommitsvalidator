@@ -1,4 +1,7 @@
 {
+  "name": "cangulo.ts.prcommitsvalidator",
+  "version": "0.0.0",
+  "description": "GH Action to validate PR commits",
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "compile": "tsc"

@@ -13,8 +13,3 @@ jobs:
       - name: Test Action
         id: run-gh-action
         uses: ./
-        with:
-          who-to-greet: "carlos"
-      - name: 'output action results'
-        run: |
-          echo "The time is: ${{ steps.run-gh-action.outputs.time }} "

@@ -1,4 +1,6 @@
-export default class calculator {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class calculator {
     static Sum(a, b) {
         let c = a + b;
         return c;
@@ -8,3 +10,4 @@ export default class calculator {
         return c;
     }
 }
+exports.default = calculator;
