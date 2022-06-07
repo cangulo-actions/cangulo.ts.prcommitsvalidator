@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "description": "GH Action to validate PR commits",
   "scripts": {
-    "pretest": "cat package.json",
-    "test2": "mocha --loader ts-node/esm tests/**/**",
-    "test": "export TS_NODE_COMPILER_OPTIONS='{\"module\":\"CommonJS\"}';mocha -r ts-node/register tests/**/*.test.ts",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "compile": "tsc",
     "precompile": "rm -rf build",
     "start": "node build/index.js"
