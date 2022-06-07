@@ -2,9 +2,11 @@
   "name": "cangulo.ts.prcommitsvalidator",
   "version": "0.0.0",
   "description": "GH Action to validate PR commits",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
+    "pretest": "cat package.json",
     "test": "export TS_NODE_COMPILER_OPTIONS='{\"module\":\"CommonJS\"}';mocha -r ts-node/register tests/**/*.test.ts",
+    "posttest": "",
     "compile": "tsc"
   },
   "devDependencies": {
