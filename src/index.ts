@@ -1,17 +1,12 @@
-import * as settingsProvider from './modules/settings-provider.js'
-import * as ghClientProvider from '@actions/github'
+import * as settingsProvider from './modules/settings-provider'
+import * as commitsProviders from './modules/commits-providers'
 
 const settings = settingsProvider.GetSettings()
-
 console.log(`settings:${JSON.stringify(settings)}`)
 
-const restClient = ghClientProvider.getOctokit(settings.ghToken)
-// const commits = await restClient.rest.pulls.listCommits({
-//     owner: settings.repoOwner,
-//     repo: settings.repoName,
-//     pull_number: settings.prNumber
-// })
 
-// commits.data.forEach(x => {
-//     console.log(`commit msg: ${x.commit}`)
-// })
+commitsProviders
+    .GetCommits(settings)
+    .then(commitList => {
+        commitList.forEach(x => console.log(x))
+    })

@@ -1,11 +1,5 @@
 import * as core from '@actions/core'
-
-class Settings {
-    prNumber!: number
-    ghToken!: string
-    repoOwner!: string
-    repoName!: string
-}
+import { Settings } from '../models/Settings'
 
 export function GetSettings(): Settings {
 
