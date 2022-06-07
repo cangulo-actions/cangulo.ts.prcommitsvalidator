@@ -1,6 +1,9 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
-
+inputs:
+  gh-token:  # id of input
+    description: 'token for getting the commit list'
+    required: true
 runs:
   using: 'node16'
   main: 'build/index.js'
