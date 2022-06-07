@@ -4,11 +4,14 @@
   "description": "GH Action to validate PR commits",
   "scripts": {
     "pretest": "cat package.json",
+    "test2": "mocha --loader ts-node/esm tests/**/**",
     "test": "export TS_NODE_COMPILER_OPTIONS='{\"module\":\"CommonJS\"}';mocha -r ts-node/register tests/**/*.test.ts",
-    "posttest": "",
-    "compile": "tsc"
+    "compile": "tsc",
+    "precompile": "rm -rf build",
+    "start": "node build/index.js"
   },
   "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
     "chai": "^4.3.6",
